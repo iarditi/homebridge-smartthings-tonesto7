@@ -471,8 +471,8 @@ def lanEventHandler(evt) {
                         switch(headerMap?.evtType) {
                             case "hkCommand":
                                 // log.trace "hkCommand($msgData)"
-                                def val1 = msgData?.value1 ?: null
-                                def val2 = msgData?.value2 ?: null
+                                def val1 = msgData?.values?.value1 ?: null
+                                def val2 = msgData?.values?.value2 ?: null
                                 processCmd(msgData?.deviceid, msgData?.command, val1, val2, true)
                                 break
                             case "enableDirect":
